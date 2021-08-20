@@ -2,7 +2,7 @@
 terraform {
   backend "s3" {
     bucket = "s3://terraform-state-igti-psalomao/"
-    key    = "state/terraform.tfstate"
+    key    = "state/igti/edc/mod1/terraform.tfstate"
     region = "us-east-2"
   }
 }
