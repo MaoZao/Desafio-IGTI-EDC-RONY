@@ -22,6 +22,6 @@ resource "aws_s3_bucket_object" "codigo_spark" {
   bucket = "${local.prefix}-${var.bucket_functions}-${var.account}"
   key    = "emr-code/pyspark/job_spark.py"
   acl    = "private"
-  source = "../etl/job_spark.py"
-  etag   = filemd5("../etl/job_spark.py")
+  source = "../../etl/job_spark.py"
+  etag   = filemd5("../../etl/job_spark.py")
 }
