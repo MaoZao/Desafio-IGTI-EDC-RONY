@@ -40,3 +40,12 @@ resource "null_resource" "fn_example_script" {
     command = "zip -rj ../../functions/fn_example_script.zip ../../functions/fn_example_script"
   }
 }
+
+
+resource "aws_s3_bucket" "bucket_functions" {
+  bucket = "${local.prefix}-${var.bucket_functions}-${var.account}"
+  key    = "emr-code/pyspark/job_spark_from_tf.py"
+  acl    = "private"
+  source = "../etl/job_spark.py"
+  etag   = filemd5("../etl/job_spark.py")
+}
