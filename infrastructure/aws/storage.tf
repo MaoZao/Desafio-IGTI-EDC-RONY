@@ -40,3 +40,5 @@ resource "null_resource" "fn_example_script" {
     command = "zip -rj ../../functions/fn_example_script.zip ../../functions/fn_example_script"
   }
 }
+
+
