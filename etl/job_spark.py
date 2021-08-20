@@ -15,7 +15,7 @@ censo = (
     .option("header", True)
     .option("inferSchema", True)
     .option("delimiter", "|")
-    .load("s3://datalake-desafio-igti-prod-landing-zone-155914520574/raw-data/matricula_*.csv")
+    .load("s3://datalake-desafio-igti-prod-landing-zone-155914520574/raw-data/")
 
 )
 
