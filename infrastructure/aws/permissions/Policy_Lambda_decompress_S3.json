@@ -2,12 +2,12 @@
     "Version": "2012-10-17",
     "Statement": [
         {
+            "Effect": "Allow",
             "Action": [
                 "logs:CreateLogGroup",
                 "logs:CreateLogStream",
                 "logs:PutLogEvents"
             ],
-            "Effect": "Allow",
             "Resource": "*"
         },
         {
@@ -16,6 +16,19 @@
                 "s3:*"
             ],
             "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticmapreduce:*"
+            ],
+            "Resource": "*"
+        },
+        {
+          "Action": "iam:PassRole",
+          "Resource": ["arn:aws:iam::155914520574:role/EMR_DefaultRole",
+                       "arn:aws:iam::155914520574:role/EMR_EC2_DefaultRole"],
+          "Effect": "Allow"
         }
     ]
 }
