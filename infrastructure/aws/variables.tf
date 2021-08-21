@@ -52,7 +52,7 @@ variable "bucket_paths" {
   type        = list(string)
   default = [
     "s3://landing-zone-155914520574",
-    "s3://processing-zone-155914520574",
+    "s3://processing-zone-155914520574/censo-emr/",
     "s3://delivery-zone-155914520574"
   ]
 }
