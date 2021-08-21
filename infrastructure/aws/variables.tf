@@ -51,9 +51,9 @@ variable "bucket_paths" {
   description = "Paths to S3 bucket used by the crawler"
   type        = list(string)
   default = [
-    "s3://landing-zone-155914520574",
-    "s3://processing-zone-155914520574/censo-emr/",
-    "s3://delivery-zone-155914520574"
+    "s3://${local.prefix}-landing-zone-155914520574",
+    "s3://${local.prefix}-processing-zone-155914520574/censo-emr/",
+    "s3://${local.prefix}-delivery-zone-155914520574"
   ]
 }
 
